@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProjectNode, TimelineEvent, Interest, ExperienceItem } from './types';
-import profileImg from './final_k.jpeg';
+import profileImg from './final_k.png';
 
 export const KRISHA_INFO = {
   name: "Krisha Sompura",
