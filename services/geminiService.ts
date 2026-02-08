@@ -22,6 +22,7 @@ export const getKrishaResponse = async (userMessage: string) => {
     - ACADEMICS: ${TIMELINE.map(t => `${t.period}: ${t.qualification} at ${t.institution} (${t.achievement})`).join('\n')}
     - PROJECTS: ${PROJECTS.map(p => `- ${p.title}: ${p.problem}. Impact: ${p.impact}. Tech: ${p.techStack.join(', ')}. GitHub: ${p.githubUrl}`).join('\n')}
     - SKILLS: ${KRISHA_INFO.skills.join(', ')}
+    - CONTACT: Email: ${KRISHA_INFO.email}, LinkedIn: ${KRISHA_INFO.linkedin}, GitHub: ${KRISHA_INFO.github}
     - ARTISTIC BACKGROUND: ${INTERESTS.map(i => `${i.name} (${i.detail})`).join(', ')}
     
     TONE:
