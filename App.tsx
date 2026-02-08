@@ -62,9 +62,7 @@ const App: React.FC = () => {
                 <i className="fa-brands fa-github"></i>
                 <span>GitHub</span>
               </a>
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full shadow-lg shadow-indigo-600/30 transition-all hover:-translate-y-1 active:translate-y-0">
-                Download Resume <i className="fa-solid fa-download ml-2"></i>
-              </button>
+
             </div>
           </div>
         </div>
