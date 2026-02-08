@@ -2,7 +2,7 @@
 import React from 'react';
 import BackgroundWaves from './components/BackgroundWaves';
 import Timeline from './components/Timeline';
-import Chatbot from './components/Chatbot';
+// import Chatbot from './components/Chatbot';
 import PolymathMenu from './components/PolymathMenu';
 import ProjectViz from './components/ProjectViz';
 import Experience from './components/Experience';
@@ -171,7 +171,7 @@ const App: React.FC = () => {
         </div>
       </footer>
 
-      <Chatbot />
+      {/* <Chatbot /> */}
     </div>
   );
 };
