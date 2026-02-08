@@ -5,23 +5,24 @@ import Timeline from './components/Timeline';
 import Chatbot from './components/Chatbot';
 import PolymathMenu from './components/PolymathMenu';
 import ProjectViz from './components/ProjectViz';
+import Experience from './components/Experience';
 import { PROJECTS, KRISHA_INFO } from './constants';
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen relative font-sans text-gray-200 pb-20 overflow-x-hidden">
       <BackgroundWaves />
-      
+
       {/* Header / Hero */}
       <header className="max-w-7xl mx-auto pt-20 px-6 mb-24">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-50 group-hover:opacity-80 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative w-56 h-56 rounded-full overflow-hidden border-2 border-white/20 bg-gray-900 shadow-2xl">
-              <img 
-                src={KRISHA_INFO.profileImage} 
-                alt={KRISHA_INFO.name} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              <img
+                src={KRISHA_INFO.profileImage}
+                alt={KRISHA_INFO.name}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
             {/* Exploration Badge */}
@@ -30,7 +31,7 @@ const App: React.FC = () => {
               <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-300">Active Explorer</span>
             </div>
           </div>
-          
+
           <div className="text-center md:text-left flex-1">
             <h1 className="text-5xl md:text-7xl font-bold font-heading text-white mb-4 tracking-tight">
               {KRISHA_INFO.name}
@@ -71,7 +72,16 @@ const App: React.FC = () => {
 
       {/* Main Content Sections */}
       <main className="max-w-7xl mx-auto px-6 space-y-32">
-        
+
+        {/* Experience Section */}
+        <section id="experience">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold font-heading text-white mb-2">Experience</h2>
+            <p className="text-gray-400">Professional journey and research contributions</p>
+          </div>
+          <Experience />
+        </section>
+
         {/* Research Lab - Bento Grid */}
         <section id="projects">
           <div className="mb-12">
@@ -87,9 +97,9 @@ const App: React.FC = () => {
                       <i className={`fa-solid ${idx % 2 === 0 ? 'fa-microscope' : 'fa-brain'}`}></i>
                     </div>
                     {project.githubUrl && (
-                      <a 
-                        href={project.githubUrl} 
-                        target="_blank" 
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="w-10 h-10 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-500/20 transition-all"
                         title="View Source on GitHub"
@@ -148,7 +158,7 @@ const App: React.FC = () => {
             <span className="text-2xl font-bold font-heading text-white">KS</span>
             <p className="text-gray-500 text-sm mt-1">© 2024 {KRISHA_INFO.name}. Dedicated to lifelong learning.</p>
           </div>
-          
+
           <div className="flex space-x-8">
             <a href={`mailto:${KRISHA_INFO.email}`} className="text-gray-400 hover:text-white transition-colors">
               <i className="fa-solid fa-envelope text-xl"></i>

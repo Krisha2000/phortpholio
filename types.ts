@@ -17,6 +17,14 @@ export interface TimelineEvent {
   type: 'school' | 'college' | 'work';
 }
 
+export interface ExperienceItem {
+  company: string;
+  role: string;
+  period: string;
+  description: string;
+  skills: string[];
+}
+
 export interface Interest {
   name: string;
   icon: string;

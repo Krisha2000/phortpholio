@@ -1,7 +1,6 @@
-
 import React from 'react';
-import { ProjectNode, TimelineEvent, Interest } from './types';
-import profileImg from './kkkkkk.jpeg';
+import { ProjectNode, TimelineEvent, Interest, ExperienceItem } from './types';
+import profileImg from './kk2.png';
 
 export const KRISHA_INFO = {
   name: "Krisha Sompura",
@@ -12,12 +11,12 @@ export const KRISHA_INFO = {
   linkedin: "https://linkedin.com/in/krishasompura",
   profileImage: profileImg,
   skills: [
-    "Python", "SQL", "MLOps", "Docker", "Airflow", "DVC", "Deep Learning", "LSTM", "GRU", "Statistical Modeling", "Business Intelligence"
+    "Python", "SQL", "Docker", "Airflow", "DVC", "Deep Learning", "LSTM", "GRU", "Statistical Modeling", "Business Intelligence"
   ],
   currentExploration: [
-    { topic: "Advanced MLOps pipelines", status: "Active" },
-    { topic: "Generative AI consistency", status: "Deep Dive" },
-    { topic: "Complex Rhythms in Percussion", status: "Practicing" }
+    { topic: "Machine Learning", status: "Active" },
+    { topic: "Statistics", status: "Deep Dive" },
+    { topic: "Generative AI", status: "Focus" }
   ],
   bio: `I am a Business Analyst Intern at Amazon, specializing in the development of scalable automation pipelines for data-driven insights. With a strong academic foundation - an M.Sc. in Data Science (CGPA: 8.88) and a B.Sc. in Mathematics (CGPA: 8.31). I am deeply motivated by solving complex analytical problems. I bring a curious, structured approach to data analysis, consistently seeking meaningful patterns that inform decision-making and drive impact.`
 };
@@ -88,6 +87,23 @@ export const PROJECTS: ProjectNode[] = [
   }
 ];
 
+export const EXPERIENCE: ExperienceItem[] = [
+  {
+    company: "Amazon",
+    role: "Business Analyst Intern",
+    period: "Jan 2026 - Present",
+    description: "Focusing on building robust Automation Pipelines and exploring Clustering Methods for data-driven insights.",
+    skills: ["Automation", "Data Analysis", "Clustering"]
+  },
+  {
+    company: "Research Assistant",
+    role: "Catastrophic Risk Analysis",
+    period: "March 2025 - Dec 2025",
+    description: "Conducted in-depth analysis on catastrophic risks, utilizing statistical models to predict and mitigate potential threats.",
+    skills: ["Risk Analysis", "Statistical Modeling", "Research"]
+  }
+];
+
 export const TIMELINE: TimelineEvent[] = [
   {
     period: "2007 - 2021",
@@ -109,13 +125,6 @@ export const TIMELINE: TimelineEvent[] = [
     qualification: "M.Sc. Data Science",
     achievement: "8.88 CGPA",
     type: "college"
-  },
-  {
-    period: "Jan 2026 - Present",
-    institution: "Amazon",
-    qualification: "Business Analyst Intern",
-    achievement: "Focusing on Automation Pipelines and Clustering Methods",
-    type: "work"
   }
 ];
 

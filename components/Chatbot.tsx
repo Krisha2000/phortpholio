@@ -35,16 +35,26 @@ const Chatbot: React.FC = () => {
   const renderFormattedText = (text: string) => {
     return text.split('\n').map((line, i) => {
       // Handle bullet points
-      const isBullet = line.trim().startsWith('* ');
+      const isBullet = line.trim().startsWith('* ') || line.trim().startsWith('- ');
       let processedLine = isBullet ? line.trim().substring(2) : line;
 
-      // Handle bold text (**text**)
+      // Handle bold (**text**) and italic (*text*)
+      // We start by splitting by bold to ensure it takes precedence
       const parts = processedLine.split(/(\*\*.*?\*\*)/g);
+
       const formattedLine = parts.map((part, j) => {
         if (part.startsWith('**') && part.endsWith('**')) {
           return <strong key={j} className="text-white font-bold">{part.slice(2, -2)}</strong>;
         }
-        return part;
+
+        // Inside non-bold parts, verify for italics
+        const subParts = part.split(/(\*.*?\*)/g);
+        return subParts.map((subPart, k) => {
+          if (subPart.startsWith('*') && subPart.endsWith('*') && subPart.length > 2) {
+            return <em key={`${j}-${k}`} className="text-indigo-300 italic">{subPart.slice(1, -1)}</em>;
+          }
+          return subPart;
+        });
       });
 
       return (
@@ -71,7 +81,7 @@ const Chatbot: React.FC = () => {
               <i className="fa-solid fa-xmark"></i>
             </button>
           </div>
-          
+
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -95,8 +105,8 @@ const Chatbot: React.FC = () => {
           </div>
 
           <div className="p-4 border-t border-white/10 flex items-center space-x-2">
-            <input 
-              type="text" 
+            <input
+              type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
@@ -109,7 +119,7 @@ const Chatbot: React.FC = () => {
           </div>
         </div>
       ) : (
-        <button 
+        <button
           onClick={() => setIsOpen(true)}
           className="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl shadow-xl shadow-indigo-600/30 transition-transform hover:scale-110 active:scale-95 group"
         >

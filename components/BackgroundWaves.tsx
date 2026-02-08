@@ -32,7 +32,7 @@ const BackgroundWaves: React.FC = () => {
     const render = () => {
       time += 0.005;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       const lines = 6;
       const step = canvas.height / (lines + 1);
 
@@ -47,7 +47,7 @@ const BackgroundWaves: React.FC = () => {
           // Fourier-inspired multi-sine wave
           const baseWave = Math.sin(x * 0.002 + time + i) * 30;
           const secondHarmonic = Math.sin(x * 0.005 - time * 0.5) * 15;
-          
+
           // Mouse ripple effect
           const dist = Math.sqrt(Math.pow(x - mouseRef.current.x, 2) + Math.pow(yOffset - mouseRef.current.y, 2));
           const ripple = Math.max(0, 100 - dist * 0.5) * Math.sin(dist * 0.05 - time * 5) * 0.5;
@@ -72,7 +72,7 @@ const BackgroundWaves: React.FC = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="fixed inset-0 -z-10 opacity-50 pointer-events-none" />;
+  return <canvas ref={canvasRef} className="fixed inset-0 -z-10 opacity-60 pointer-events-none" />;
 };
 
 export default BackgroundWaves;
