@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProjectNode, TimelineEvent, Interest, ExperienceItem } from './types';
-import profileImg from './kk2.png';
+import profileImg from './final_k.jpeg';
 
 export const KRISHA_INFO = {
   name: "Krisha Sompura",
@@ -18,7 +18,7 @@ export const KRISHA_INFO = {
     { topic: "Statistics", status: "Deep Dive" },
     { topic: "Generative AI", status: "Focus" }
   ],
-  bio: `I am a Business Analyst Intern at Amazon, specializing in the development of scalable automation pipelines for data-driven insights. With a strong academic foundation - an M.Sc. in Data Science (CGPA: 8.88) and a B.Sc. in Mathematics (CGPA: 8.31). I am deeply motivated by solving complex analytical problems. I bring a curious, structured approach to data analysis, consistently seeking meaningful patterns that inform decision-making and drive impact.`
+  bio: `I am a Business Analyst Intern at Amazon, specializing in the development of scalable automation pipelines for data-driven insights. With a strong academic foundation in Data Science and Mathematics, I am deeply motivated by solving complex analytical problems. I bring a curious, structured approach to data analysis, consistently seeking meaningful patterns that inform decision-making and drive impact.`
 };
 
 export const PROJECTS: ProjectNode[] = [
@@ -29,7 +29,7 @@ export const PROJECTS: ProjectNode[] = [
     techStack: ["Python", "Streamlit", "Gemini LLM/Vision", "ChromaDB"],
     impact: "Enables professional-grade, consistent character-driven visual storytelling.",
     vizType: 'line',
-    githubUrl: "https://github.com/krishasompura/comic-ai"
+    githubUrl: "https://github.com/Krisha2000/comic-ai"
   },
   {
     id: "warehouse",
@@ -38,7 +38,7 @@ export const PROJECTS: ProjectNode[] = [
     techStack: ["Python", "Apache Airflow", "Docker", "PostgreSQL"],
     impact: "Minimized product spoilage and optimized labor efficiency.",
     vizType: 'bar',
-    githubUrl: "https://github.com/krishasompura/warehouse-optimizer"
+    githubUrl: "https://github.com/Krisha2000/flower_warehouse_optimizer.git"
   },
   {
     id: "fake-review",
@@ -47,7 +47,7 @@ export const PROJECTS: ProjectNode[] = [
     techStack: ["Python", "Streamlit", "Scikit-learn", "Gensim"],
     impact: "Enhances consumer trust by filtering out fake content with high accuracy.",
     vizType: 'radar',
-    githubUrl: "https://github.com/krishasompura/fake-review-detection"
+    githubUrl: "https://github.com/Krisha2000/Project_WoC_7.0_Fake_Review_Detection_Chechpoint_4.git"
   },
   {
     id: "traffic",
@@ -56,7 +56,7 @@ export const PROJECTS: ProjectNode[] = [
     techStack: ["Python", "PyTorch", "Statsmodels", "Scikit-learn"],
     impact: "Achieved lowest RMSE (3.57) and 90% prediction interval coverage.",
     vizType: 'line',
-    githubUrl: "https://github.com/krishasompura/traffic-forecasting"
+    githubUrl: "https://github.com/Krisha2000/Traffic-Flow-Forecasting-System.git"
   },
   {
     id: "anomaly",
@@ -65,7 +65,7 @@ export const PROJECTS: ProjectNode[] = [
     techStack: ["Python", "Streamlit", "PyTorch", "Google Gemini API"],
     impact: "Reduces false positives and provides explainable AI insights for data integrity.",
     vizType: 'scatter',
-    githubUrl: "https://github.com/krishasompura/anomaly-detector"
+    githubUrl: "https://github.com/Krisha2000/hybrid-timeseries-anomaly-detector-app.git"
   },
   {
     id: "yulu",
@@ -74,7 +74,7 @@ export const PROJECTS: ProjectNode[] = [
     techStack: ["Python", "Pandas", "SciPy", "Scikit-learn"],
     impact: "Revealed 3 key user segments; enabled dynamic pricing (+15%) to recover revenue.",
     vizType: 'bar',
-    githubUrl: "https://github.com/krishasompura/yulu-analysis"
+    githubUrl: "https://github.com/Krisha2000/Yulu_Bike_Sharing_Demand_Analysis.git"
   },
   {
     id: "health",
@@ -83,7 +83,7 @@ export const PROJECTS: ProjectNode[] = [
     techStack: ["Python", "Jupyter", "Pandas", "Matplotlib"],
     impact: "Informed policy by proving preventive care structure is more critical than raw expenditure.",
     vizType: 'scatter',
-    githubUrl: "https://github.com/krishasompura/healthcare-economics"
+    githubUrl: "https://github.com/Krisha2000/Economics.git"
   }
 ];
 
@@ -106,11 +106,11 @@ export const EXPERIENCE: ExperienceItem[] = [
 
 export const TIMELINE: TimelineEvent[] = [
   {
-    period: "2007 - 2021",
-    institution: "Matruchhaya Kanya Vidhyalay",
-    qualification: "Schooling",
-    achievement: "10th: 90.66%; 12th PCM: 85.65%",
-    type: "school"
+    period: "2024 - 2026",
+    institution: "Dhirubhai Ambani University",
+    qualification: "M.Sc. Data Science",
+    achievement: "8.88 CGPA",
+    type: "college"
   },
   {
     period: "2021 - 2024",
@@ -120,11 +120,11 @@ export const TIMELINE: TimelineEvent[] = [
     type: "college"
   },
   {
-    period: "2024 - 2026",
-    institution: "Dhirubhai Ambani University",
-    qualification: "M.Sc. Data Science",
-    achievement: "8.88 CGPA",
-    type: "college"
+    period: "2007 - 2021",
+    institution: "Matruchhaya Kanya Vidhyalay",
+    qualification: "Schooling",
+    achievement: "10th: 90.66%; 12th PCM: 85.65%",
+    type: "school"
   }
 ];
 

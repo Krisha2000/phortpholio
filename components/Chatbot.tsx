@@ -47,12 +47,30 @@ const Chatbot: React.FC = () => {
           return <strong key={j} className="text-white font-bold">{part.slice(2, -2)}</strong>;
         }
 
-        // Inside non-bold parts, verify for italics
-        const subParts = part.split(/(\*.*?\*)/g);
+        // Inside non-bold parts, verify for italics AND links
+        const subParts = part.split(/(\*.*?\*|https?:\/\/[^\s]+)/g);
+
         return subParts.map((subPart, k) => {
+          // Handle Italics
           if (subPart.startsWith('*') && subPart.endsWith('*') && subPart.length > 2) {
             return <em key={`${j}-${k}`} className="text-indigo-300 italic">{subPart.slice(1, -1)}</em>;
           }
+
+          // Handle Links
+          if (subPart.match(/^https?:\/\//)) {
+            return (
+              <a
+                key={`${j}-${k}`}
+                href={subPart}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-400 underline break-all hover:text-indigo-300 transition-colors"
+              >
+                {subPart}
+              </a>
+            );
+          }
+
           return subPart;
         });
       });
