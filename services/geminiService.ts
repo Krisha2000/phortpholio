@@ -36,7 +36,7 @@ export const getKrishaResponse = async (userMessage: string) => {
 
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-2.0-flash-lite-preview-02-05',
       // This is required for client-side API calls
       // The user is aware of the security implications for this portfolio site.
       // We are using gemini-1.5-flash for its generous free tier.
