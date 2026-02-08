@@ -7,8 +7,8 @@ export const KRISHA_INFO = {
   role: "Business Analyst Intern @ Amazon",
   location: "India",
   email: "krishasomapura@gmail.com",
-  github: "https://github.com/krishasompura",
-  linkedin: "https://linkedin.com/in/krishasompura",
+  github: "https://github.com/Krisha2000",
+  linkedin: "https://www.linkedin.com/in/krisha-sompura-04ba8a238/",
   profileImage: profileImg,
   skills: [
     "Python", "SQL", "Docker", "Airflow", "DVC", "Deep Learning", "LSTM", "GRU", "Statistical Modeling", "Business Intelligence"
@@ -29,7 +29,7 @@ export const PROJECTS: ProjectNode[] = [
     techStack: ["Python", "Streamlit", "Gemini LLM/Vision", "ChromaDB"],
     impact: "Enables professional-grade, consistent character-driven visual storytelling.",
     vizType: 'line',
-    githubUrl: "https://github.com/Krisha2000/comic-ai"
+    githubUrl: "https://github.com/Krisha2000/T16_mlse_project.git"
   },
   {
     id: "warehouse",
