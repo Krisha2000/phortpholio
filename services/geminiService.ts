@@ -3,7 +3,12 @@ import { GoogleGenAI } from "@google/genai";
 import { KRISHA_INFO, PROJECTS, TIMELINE, INTERESTS, EXPERIENCE } from "../constants";
 
 export const getKrishaResponse = async (userMessage: string) => {
-  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  if (!apiKey) {
+    console.error("Gemini API Key is missing!");
+    return "Configuration Error: API Key is missing. Please add VITE_GEMINI_API_KEY to your environment variables.";
+  }
+  const ai = new GoogleGenAI({ apiKey });
   // actually, I don't have the key in history. I will ask the user to input it or set it in .env
   // Wait, I can see the error message in the screenshot.
   // The error message "I'm currently unable to access my knowledge base" comes from the catch block in geminiService.ts
